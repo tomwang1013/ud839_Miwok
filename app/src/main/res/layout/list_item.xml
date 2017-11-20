@@ -2,22 +2,41 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:padding="16dp"
+    android:orientation="horizontal"
     android:id="@+id/list_item"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <TextView
-        tools:text="lutti"
-        android:id="@+id/miwork_text_view"
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/image"
+        android:background="#FFF7DA"
+        android:layout_gravity="center_vertical"
+        android:src="@mipmap/ic_launcher"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
-    <TextView
-        tools:text="one"
-        android:id="@+id/default_text_view"
+    <LinearLayout
+        android:id="@+id/list_item_text"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:paddingLeft="16dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="@dimen/list_item_height">
+        <TextView
+            tools:text="lutti"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:id="@+id/miwork_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            tools:text="one"
+            android:textSize="18sp"
+            android:textColor="@android:color/white"
+            android:id="@+id/default_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 
 </LinearLayout>

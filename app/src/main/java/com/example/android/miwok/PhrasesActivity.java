@@ -23,7 +23,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class PhrasesActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,7 +41,7 @@ public class PhrasesActivity extends AppCompatActivity {
                 new Word("Come here", "ənni'nem")
         ));
 
-        WordAdapter itemsAdapter = new WordAdapter(this, words);
+        WordAdapter itemsAdapter = new WordAdapter(this, words, R.color.category_phrases);
         ListView listView = findViewById(R.id.list);
         listView.setAdapter(itemsAdapter);
     }

@@ -23,24 +23,23 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class ColorsActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.word_list);
 
         ArrayList<Word> words = new ArrayList<>(Arrays.asList(
-                new Word("red", "weṭeṭṭi"),
-                new Word("green", "chokokki"),
-                new Word("brown", "ṭakaakki"),
-                new Word("gray", "ṭopoppi"),
-                new Word("black", "kululli"),
-                new Word("white ", "kelelli"),
-                new Word("dusty yellow", "ṭopiisə"),
-                new Word("mustard yellow", "chiwiiṭə")
+                new Word("red", "weṭeṭṭi", R.drawable.color_red),
+                new Word("green", "chokokki", R.drawable.color_green),
+                new Word("brown", "ṭakaakki", R.drawable.color_brown),
+                new Word("gray", "ṭopoppi", R.drawable.color_gray),
+                new Word("black", "kululli", R.drawable.color_black),
+                new Word("white ", "kelelli", R.drawable.color_white),
+                new Word("dusty yellow", "ṭopiisə", R.drawable.color_dusty_yellow),
+                new Word("mustard yellow", "chiwiiṭə", R.drawable.color_mustard_yellow)
         ));
 
-        WordAdapter itemsAdapter = new WordAdapter(this, words);
+        WordAdapter itemsAdapter = new WordAdapter(this, words, R.color.category_colors);
         ListView listView = findViewById(R.id.list);
         listView.setAdapter(itemsAdapter);
     }
